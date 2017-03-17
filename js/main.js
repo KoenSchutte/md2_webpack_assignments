@@ -1,20 +1,22 @@
 /**
  * Uitleg van deze opdrachten:
- * Kijk hoever je komt met deze opdrachten. Ik zal deze lijst in de toekomst nog wat uitbreiden met nieuwere opdrachten
- * Je mag me bij elke opdracht om hulp vragen
- * Sowieso wil ik je werk zien. Dus loop even bij me langs als je 1 of meerdere opdrachten af hebt
+ * Kijk hoever je komt met deze opdrachten. Ik zal deze lijst in de toekomst
+ * nog wat uitbreiden met nieuwere opdrachten Je mag me bij elke opdracht om
+ * hulp vragen Sowieso wil ik je werk zien. Dus loop even bij me langs als je 1
+ * of meerdere opdrachten af hebt
  */
+
 /**
  * Opdracht 1: primitives
  * Maak voor de volgende primitives 5 goed bedachte variabelen per primitive
- * 
+ *
  * 5 variabelen met daarin een string
  * 5 variabelen met daarin een number
  * 5 variabelen met daarin een boolean
- * 
- * Geef ze een goede engelse naam en sla er iets in op wat een goed voorbeeld geeft
- * van Media Development producten (apps, sites, etc.)
- * Bijvoorbeeld een string variabele met de naam 'teacherName' en als waarde 'Berend'
+ *
+ * Geef ze een goede engelse naam en sla er iets in op wat een goed voorbeeld
+ * geeft van Media Development producten (apps, sites, etc.) Bijvoorbeeld een
+ * string variabele met de naam 'teacherName' en als waarde 'Berend'
  */
 var IDE = "intelij";
 var teacherFirstName = "Berend";
@@ -39,7 +41,8 @@ var mbo = true;
  * Bedenk 3 arrays en vul ze met primitives
  * console.log de lengte van de arrays
  *
- * Bijvoorbeeld een Array met de naam 'students' en als waarde ['Berend', "Erwin']
+ * Bijvoorbeeld een Array met de naam 'students' en als waarde ['Berend',
+ * "Erwin']
  */
 var nivea = ['mbo', 'hbo'];
 var studenten = ['Thijs', 'Bram', 'Gijs'];
@@ -69,7 +72,8 @@ spliceArray.splice(1, 1);
  * Opdracht 5: Objects
  * Maak van 10 objecten uit je dagelijkse leven een object
  *
- * Bijvoorbeeld een object met de gegevens van je mobiel zoals welk merk, type en hoe oud hij is
+ * Bijvoorbeeld een object met de gegevens van je mobiel zoals welk merk, type
+ * en hoe oud hij is
  */
 
 var auto = {model: "Taurus", merk: "ford"};
@@ -86,8 +90,8 @@ var tas = {materiaal: "stof", merk: "highsierra"};
 /**
  * Opdracht 6: Functions
  * Bedenk 4 functies die handig zouden kunnen zijn
- * Bijvoorbeeld een functie met de naam 'multiply'. Deze functie verwacht 2 parameters value & multiplier
- * console.log( value * multiplier)
+ * Bijvoorbeeld een functie met de naam 'multiply'. Deze functie verwacht 2
+ * parameters value & multiplier console.log( value * multiplier)
  */
 
 function multiply(value, multiplier) {
@@ -107,8 +111,8 @@ function multiply3(value, multiplier) {
 /**
  * Opdracht 7: Function & objects
  * Maak een functie die een firstName en lastName verwacht als parameter
- * vervolgens returned de functie een object met daarin de firstname en lastname opgeslagen
- * roep deze functie aan en console.log() de waarde
+ * vervolgens returned de functie een object met daarin de firstname en
+ * lastname opgeslagen roep deze functie aan en console.log() de waarde
  */
 
 function zeven(firstName, lastName) {
@@ -129,22 +133,117 @@ function zeven(firstName, lastName) {
 var student = {showName: function showName(){}};
 
 /**
- * Opdracht 9: Functions, objects
- * Maak een object genaamd 'student'
- * Voeg nadat je het object hebt aangemaakt een functie toe aan 'student' met de naam 'showName'
- */
-
-var student2 = {};
-
-/**
- * Opdracht 10: Arrays & for loops
+ * Opdracht 9: Arrays & for loops
  * Maak een array genaamd 'students' met daarin 10 namen van je medeleerlingen
- * Schrijf een for loop om alle namen in de Array te laten zien
+ * Schrijf een for loop om alle namen in de Array te laten zien (console.log())
  */
 
 var students = ['Koen', 'Indy', 'Dzabir', 'Chris', 'Stijn', 'Coen', 'Gerwin', 'Nino', 'Wesley', 'Rick'];
 
-for(i = 0; i < 11; i++){
-    students[i]
+for(let i = 0; i < 11; i++){
+    console.log(students[i]);
 };
 
+/**
+ * Opdracht 10: Strings samenvoegen
+ * Maak een variabele met de naam firstName, sla je voornaam hierin op
+ * Maak een variabele met de naam lastName, sla je achternaam hierin op
+ * Maak een variabele fullName, en zorg ervoor dat de variabelen 'firstName' en
+ * 'lastName' hier samen in worden opgeslagen
+ */
+
+let firstName = "Koen";
+let lastName = "Schutte";
+let fullName = firstName + " " + lastName;
+console.log(fullName);
+
+/**
+ * Opdracht 11: Random cijfers
+ * console.log() een willekeurige cijfer tussen 0 en 5
+ * console.log() een willekeurige cijfer tussen 1 en 10
+ * console.log() een willekeurige cijfer tussen 30 en 40
+ * console.log() een willekeurige cijfer tussen -100 en 100
+ */
+
+console.log(Math.random()* 5);
+console.log(Math.random()* 9 + 1);
+console.log(Math.random()* 9 + 30);
+console.log(Math.random()* 200 - 100);
+
+/**
+ * Opdracht 12: Primitive, Array of object?
+ * Geef in de console.log antwoord op de vraag door een boolean op true of
+ * false te zetten
+ */
+console.log('De naam van een gebruiker sla ik op in een:',
+            { array : false, object : false, primitive : true });
+
+console.log('De naam, leeftijd en lengte van een gebruiker sla ik op in een:',
+            { array : false, object : true, primitive : false });
+
+console.log('Alle facturen van een zakelijke klant sla ik op in een:',
+            { array : true, object : false, primitive : false });
+
+console.log('Een factuur sla ik op in een:',
+            { array : false, object : false, primitive : true });
+
+console.log('Als ik vanuit JavaScript een menu maak met knoppen, dan sla ik de knoppen op in een:',
+            { array : true, object : false, primitive : false });
+
+/**
+ * Opdracht 13: Keywords
+ * Maak 4 variabelen aan met de let keyword
+ * Maak 4 variabelen aan met de const keyword
+ */
+
+let autotje = "ford";
+let vervoer = "fiets";
+let school = "mediacollege";
+let browser = "chrome";
+
+const een = 1;
+const twee = "twee";
+const drie = "drieweeler";
+const vier = "klaver";
+
+/**
+ * Opdracht 14: Keywords
+ * Geef antwoord op de volgende vragen:
+ */
+console.log('Wanneer gebruik je de let keyword?', 'Wanneer je het maar 1 keer in een scope wil gebruiken');
+console.log('Wanneer gebruik je de const keyword', 'Als je alleen de waarde wilt aanpassen, maar niet het type');
+
+/**
+ * Opdracht 15: Objects en array
+ * Maak een object voor jezelf (naam, leeftijd, lengte)
+ * Maak in je object een array aan genaamd 'family' en vul deze array met namen uit je familie
+ * (objecten en arrays kunnen in elkaar opgeslagen worden)
+ */
+
+let koen = {leeftijd: "17", achternaa: "Schutte", lengte: "1.80"};
+
+console.log("+1");
+function changeNumber(number) {
+    var plus1 = number+2;
+    console.log(plus1);
+}
+var array = [0,1,2,3,4];
+array.forEach(changeNumber);
+console.log("__________");
+console.log("-1");
+
+array.forEach(function(number) {
+   var minus1 = number-1;
+   console.log(minus1);
+});
+
+
+var vermenigvuldigen = function(array, back) {
+    var keer = array[2];
+    back(keer);
+}
+console.log("__________");
+console.log("Haal data uit nummer");
+
+
+vermenigvuldigen([0,1,2,3,4], console.log)
