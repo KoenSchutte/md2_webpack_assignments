@@ -187,6 +187,7 @@ console.log('Alle facturen van een zakelijke klant sla ik op in een:',
 console.log('Een factuur sla ik op in een:',
             { array : false, object : false, primitive : true });
 
+
 console.log('Als ik vanuit JavaScript een menu maak met knoppen, dan sla ik de knoppen op in een:',
             { array : true, object : false, primitive : false });
 
@@ -216,9 +217,11 @@ console.log('Wanneer gebruik je de const keyword', 'Als je alleen de waarde wilt
 /**
  * Opdracht 15: Objects en array
  * Maak een object voor jezelf (naam, leeftijd, lengte)
- * Maak in je object een array aan genaamd 'family' en vul deze array met namen uit je familie
+ * Maak in je object een array aan genaamd 'family' en vul deze array met namen
+ * uit je familie
  * (objecten en arrays kunnen in elkaar opgeslagen worden)
  */
+
 
 let koen = {leeftijd: "17", achternaa: "Schutte", lengte: "1.80"};
 
@@ -247,3 +250,42 @@ console.log("Haal data uit nummer");
 
 
 vermenigvuldigen([0,1,2,3,4], console.log)
+
+/**
+ * Hieronder heb ik code geschreven die je nodig hebt voor vraag 16 en 17
+ * Aan deze code hoef je niets te veranderen
+ */
+
+Array.prototype.random = function() {
+    let randomIndex = Math.floor(Math.random() * this.length);
+    return this[ randomIndex ];
+};
+
+String.prototype.replaceAll = function(search, replacement) {
+    return this.replace(new RegExp(search, 'g'), replacement);
+};
+
+/**
+ * Opdracht 16: Custom prototype method gebruiken
+ * Maak een array met meerdere namen
+ * Probeer vervolgens de random() functie (die hierboven staat) te gebruiken
+ * Tip: je roept deze functie op dezelfde manier aan als bijvoorbeeld push() en
+ * splice().
+ * console.log() de naam die deze functie returned
+ */
+
+/**
+ * Opdracht 17: Custom prototype method gebruiken
+ * Maak een variabele waarin je een lange tekst opslaat
+ * Probeer vervolgens de replaceAll() functie te gebruiken om een bepaald woord
+ * op alle plekken te vervangen voor een ander woord
+ * console.log() deze gewijzigde tekst
+ */
+
+/**
+ * Opdracht 18: Prototype based language
+ * Geef antwoord op onderstaande vraag
+ */
+console.log('Waarom heet JavaScript een prototype based language?',
+            'jouw antwoord');
+
