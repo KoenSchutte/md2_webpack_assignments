@@ -230,7 +230,7 @@ function changeNumber(number) {
 var array = [0,1,2,3,4];
 array.forEach(changeNumber);
 console.log("__________");
-console.log("-1");
+console.log("-- -1");
 
 array.forEach(function(number) {
    var minus1 = number-1;
@@ -239,7 +239,7 @@ array.forEach(function(number) {
 
 
 var vermenigvuldigen = function(array, back) {
-    var keer = array[2];
+    var keer = array[4];
     back(keer);
 }
 console.log("__________");
