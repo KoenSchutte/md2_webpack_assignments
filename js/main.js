@@ -255,6 +255,7 @@ vermenigvuldigen([0,1,2,3,4], console.log)
  * Hieronder heb ik code geschreven die je nodig hebt voor vraag 16 en 17
  * Aan deze code hoef je niets te veranderen
  */
+console.log('-----------------------------');
 
 Array.prototype.random = function() {
     let randomIndex = Math.floor(Math.random() * this.length);
@@ -273,6 +274,8 @@ String.prototype.replaceAll = function(search, replacement) {
  * splice().
  * console.log() de naam die deze functie returned
  */
+var names1 = ['Jaap', 'Klaas', 'Sjonnie'];
+console.log(names1.random());
 
 /**
  * Opdracht 17: Custom prototype method gebruiken
@@ -282,10 +285,14 @@ String.prototype.replaceAll = function(search, replacement) {
  * console.log() deze gewijzigde tekst
  */
 
+let langeTekst = 'koen chris indy zab irtim';
+console.log(langeTekst.replaceAll('koen','veranderd'));
+
+
 /**
  * Opdracht 18: Prototype based language
  * Geef antwoord op onderstaande vraag
  */
 console.log('Waarom heet JavaScript een prototype based language?',
-            'jouw antwoord');
+            'Omdat je standaard objects krijgt');
 
