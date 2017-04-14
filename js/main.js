@@ -303,6 +303,19 @@ console.log('Waarom heet JavaScript een prototype based language?',
  * je bij elke array een empty() functie kunt aanroepen.
  * Zorg ervoor dat deze functie er is en laat met 3 arrays zien dat hij werkt
  */
+String.prototype.replaceAll = function(search, replacement) {
+    return this.replace(new RegExp(search, 'g'), replacement);
+};
+
+Array.prototype.empty = function () {
+   return this.length = 0;
+
+
+}
+
+let arraay = [1,2,3,4];
+console.log(arraay);
+console.log(arraay.empty());
 
 /**
  * Opdracht 20: Monkey patching (?)
@@ -310,3 +323,20 @@ console.log('Waarom heet JavaScript een prototype based language?',
  * functies van Arrays te overschrijven met een eigen functie.
  * Maak 2 arrays aan en laat zien dat je code werkt
  */
+
+Array.prototype.splice = function (value, input) {
+
+}
+
+
+Array.prototype.push = function (input) {
+    var len = this.length;
+    this[len] = input;
+    len++;
+    this.length = len;
+    return len;
+}
+
+let fruit = ["apple","banananana", "pear"];
+console.log(fruit.push("kiwi"));
+console.log(fruit);
